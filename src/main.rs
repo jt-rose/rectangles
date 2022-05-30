@@ -4,6 +4,7 @@ fn main() {
         50
     );
 
+    println!("Current Rectangle: {:#?}", rectangle);
     println!("The rectangle has an area of {}", rectangle.get_area());
 }
 
@@ -11,6 +12,7 @@ fn main() {
 //     rectangle.width * rectangle.height
 // }
 
+#[derive(Debug)]
 struct Rectangle {
     width: u32,
     height: u32
