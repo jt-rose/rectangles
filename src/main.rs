@@ -4,13 +4,14 @@ fn main() {
         50
     );
 
+    // using debug trait with pretty printing
     println!("Current Rectangle: {:#?}", rectangle);
+
+    // using the debug macro
+    dbg!(&rectangle);
+
     println!("The rectangle has an area of {}", rectangle.get_area());
 }
-
-// fn area(rectangle: &Rectangle) -> u32 {
-//     rectangle.width * rectangle.height
-// }
 
 #[derive(Debug)]
 struct Rectangle {
