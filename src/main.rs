@@ -1,12 +1,19 @@
 fn main() {
-    let width: u32 = 10;
-    let height: u32 = 15;
+    let rectangle = Rectangle{
+        width: 30,
+        height: 50
+    };
 
-    let rectangle_area = area(width, height);
+    let rectangle_area = area(&rectangle);
 
     println!("The rectangle has an area of {}", rectangle_area);
 }
 
-fn area(width: u32, height: u32) -> u32 {
-    width * height
+fn area(rectangle: &Rectangle) -> u32 {
+    rectangle.width * rectangle.height
+}
+
+struct Rectangle {
+    width: u32,
+    height: u32
 }
